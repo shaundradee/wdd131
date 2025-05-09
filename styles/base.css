@@ -1,0 +1,156 @@
+/* color scheme - playing around and will narrow down more as I go -side note: noticing CSS doesn't like in-line comments */
+:root {
+    /* Neutrals */
+    --color-bg: #fdfaf6; /* Soft cream background */
+    --color-text: #333333; /* Charcoal text */
+    --color-border: #ddd; /* Light border */
+
+    /* Primary Palette */
+    --color-primary: #d4a5a5; /* Dusty rose */
+    --color-accent: #f4978e; /* Warm coral ...not sure will use? */
+    --color-secondary: #588157; /* Forest green ...like..? */
+    --color-highlight: #fdd9b5; /* Soft peach ...another maybe */
+
+    /* Optional deeper tones */
+    --color-tertiary: #4a6d7c; /* Deep teal */
+    --color-muted: #e7f0da; /* Light sage */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonts chosen for the webpage copied from google fonts*/
+.kaushan-script-regular {
+    font-family: "Kaushan Script", cursive;
+}
+
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+}
+
+/* setting page up as a grid to format more easily */
+body {
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, auto);
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--color-muted);
+}
+
+header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid var(--color-border);
+    text-align: center;
+}
+
+nav {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    color: var(--color-text);
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: var(--color-muted);
+    padding: 10px;
+    border-radius: 3px;
+    border: 3px solid var(--color-border);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    background-color: var(--color-tertiary);
+    border-radius: 4px;
+}
+
+main {
+    grid-column: 1 / -1;
+    grid-row: 6 / 9;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+section h2 {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border-radius: 3px;
+    border: 3px solid var(--color-border);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+section h3 {
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+img {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Me card (2/3 width) */
+.card:first-of-type {
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    background-color: var(--color-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Web Dev Resources card (1/3 width) */
+.card:last-of-type {
+    grid-column: 9 / -1;
+    grid-row: 1 / 2;
+    background-color: var(--color-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* need to adjust second card navigation */
+section nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    list-style: circle;
+    background-color: var(--color-bg);
+    border: 0px;
+}
+
+/* need to shift text and images */
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+footer {
+    grid-column: 1 / -1;
+    grid-row: 9 / 13;
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid var(--color-border);
+    font-size: 0.9rem;
+}
