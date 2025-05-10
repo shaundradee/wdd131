@@ -80,7 +80,8 @@ nav a:hover {
 }
 
 main {
-    max-width: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     grid-column: 1 / -1;
     grid-row: 6 / 9;
     display: grid;
