@@ -1,0 +1,20 @@
+@media screen and (min-width: 740px) {
+    /* show nav horizontally */
+    #main-nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    /* hide hamburger icon */
+    #menu-toggle {
+        display: none;
+    }
+
+.temple-gallery {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+
