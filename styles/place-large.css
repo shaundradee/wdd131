@@ -1,11 +1,16 @@
 @media screen and (min-width: 1000px) {
+  .weather-icon {
+    display: none;
+  }
+
   main {
     position: relative;
     height: 100vh;
     overflow: hidden;
   }
 
-  picture, picture img {
+  picture,
+  picture img {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +24,8 @@
     position: absolute;
     width: 30%;
     max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent to show the image */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* semi-transparent to show the image */
     z-index: 1;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -37,5 +43,22 @@
 
   .weather-icon svg {
     height: 100px;
+  }
+
+  .table2 th::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background: url('weather-icon.svg') no-repeat center center;
+    background-size: contain;
+  }
+
+  .table2 th {
+    font-size: 1.2rem;
+    line-height: 1;
+    white-space: nowrap;
   }
 }
