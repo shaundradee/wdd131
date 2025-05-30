@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #f2f2f2;
+  --text-color: #111111;
+  --heading-font: 'Kaushan Script', cursive;
+  --body-font: 'Poiret One', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+body h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hamburger Button */
+#menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+}
+
+#main-nav ul {
+    font-family: var(--body-font);
+    list-style: none;
+    flex-direction: column;
+    display: none; 
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+}
+
+/* when menu is open (JS) */
+#main-nav.open ul {
+    display: flex;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.temple-gallery {
+    display: grid;
+    /* flex grid that will have a minimum of 250px per column */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 1rem;
+}
+
+/* new styling for images moved to JS */
+.temple-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
