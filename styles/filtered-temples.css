@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #0066cc;
-  --secondary-color: #f2f2f2;
-  --text-color: #111111;
-  --heading-font: 'Kaushan Script', cursive;
-  --body-font: 'Poiret One', sans-serif;
+    --primary-color: #0066cc;
+    --secondary-color: #f2f2f2;
+    --text-color: #111111;
+    --heading-font: 'Kaushan Script', cursive;
+    --body-font: 'Poiret One', sans-serif;
 }
 
 * {
@@ -51,7 +51,7 @@ header {
     font-family: var(--body-font);
     list-style: none;
     flex-direction: column;
-    display: none; 
+    display: none;
     gap: 0.5rem;
     align-items: center;
 }
@@ -84,7 +84,7 @@ main {
 .temple-gallery {
     display: grid;
     /* flex grid that will have a minimum of 250px per column */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
 }
 
