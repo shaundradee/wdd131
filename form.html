@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="WK05 WDD131 Product Review Form">
+    <meta name="author" content="Shaundra Strong">
+    <link rel="stylesheet" href="styles/form-small.css">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <fieldset>
+                <legend>Products*</legend>
+                <label>Product Name<select name="productName" id="product" required>
+                        <!-- Options added via array in JavaScript -->
+                        <option value="" disabled selected>Select a Product...</option>
+                    </select></label>
+            </fieldset>
+            <fieldset>
+                <legend>Overall Rating*</legend>
+                <label><input type="radio" name="overallRating" id="rating1" value="1" required>&star;</label>
+                <label><input type="radio" name="overallRating" id="rating2" value="2">&star;&star;</label>
+                <label><input type="radio" name="overallRating" id="rating3" value="3">&star;&star;&star;</label>
+                <label><input type="radio" name="overallRating" id="rating4" value="4">&star;&star;&star;&star;</label>
+                <label><input type="radio" name="overallRating" id="rating5" value="5">&star;&star;&star;&star;&star;</label>
+            </fieldset>
+            <fieldset>
+                <legend>Date of Installation*</legend>
+                <label>Anticipated Install Date <input type="date" id="date" name="installDate" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Useful Features (check all that apply)</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="easy to use"> Easy to Use</label>
+                <label><input type="checkbox" id="feature2" name="features" value="durable"> Durable</label>
+                <label><input type="checkbox" id="feature3" name="features" value="performance"> High Performance</label>
+                <label><input type="checkbox" id="feature4" name="features" value="affordable"> Affordable</label>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review</legend>
+                <label><textarea name="review" id="written review" placeholder="Share your thoughts..."></textarea></label>
+            </fieldset>
+            <fieldset>
+                <legend>User Name</legend>
+                <label><input type="text" id="name" name="userName"></label>
+            </fieldset>
+            <label><input type="submit" value="Give Review"></label>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🐾 Shaundra Strong 🐾 North Carolina, USA</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
