@@ -1,0 +1,340 @@
+:root {
+    --font-family-primary: "Shadows Into Light Two", cursive;
+    --font-family-secondary: "Roboto Flex", sans-serif;
+
+    --color-darkmuted: rgb(69, 126, 111);
+    --color-midmuted: rgb(120, 165, 163);
+    --color-tan: rgb(186, 158, 123);
+    --color-black: rgb(23, 22, 22);
+    --color-light: rgb(243, 239, 230);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    height: 100%;        /* allow full viewport height */
+    margin: 0;
+}
+
+
+/* ---Image main bg for all pages but events and herbs--- */
+#hero {
+    background-image: url("/project/images/heroimage-herb.webp");
+    background-color: var(--color-light);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ----Header styling for all pages---- */
+header {
+    text-align: center;
+    background-color: var(--color-darkmuted);
+    font-family: var(--font-family-secondary);
+    border: 2px solid var(--color-midmuted);
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p{
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    background-color: var(--color-light);
+    border-radius: 5px;
+}
+
+header img {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    border-radius: 38%;
+}
+
+.navbar {
+    position: relative;
+    text-align: right;
+}
+
+/* Hamburger button */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Menu default hidden */
+.menu {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    background: var(--color-light);
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    list-style: none;
+    border: 1px solid var(--color-tan);
+}
+
+.menu li {
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.menu li:hover {
+    background-color: var(--color-midmuted);
+}
+
+.menu li a {
+    display: block;
+    padding: .75rem;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/* submenu */
+.dropdown {
+    display: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.has-submenu.open .dropdown {
+    display: block;
+    border: 1px solid var(--color-tan);
+}
+
+#submenu li:hover{
+    background-color: var(--color-light);
+}
+
+/* ----Shared card-like section styles---- */
+#pick, #event, #message, .signup {
+    background-color: rgba(255, 255, 255, 0.7); /* translucent white */
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: var(--font-family-secondary);
+}
+
+/* Headings inside any section with anchor links */
+#pick h2 a,
+#event h2 a,
+#message h2 a,
+.signup a {
+    font-family: var(--font-family-primary);
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--color-black);
+    padding-bottom: 1rem;
+}
+
+/* Shared figcaption styling */
+#pick p,
+figcaption, .signup, .herb-card h2
+ {
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+/* Image styling for all section figures */
+
+#event figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: .5rem;
+}
+
+/* Animation for Spotlight section */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    margin-top: .5rem;
+    border-radius: 6px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+}
+
+.slide-text {
+    margin-top: 10%;
+}
+
+/* Active slide */
+.slide.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hidden slide before/after transition */
+.slide:not(.show) {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.herb-card {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7); /* translucent white */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+    color: var(--color-black);
+}
+
+.herb-card p {
+    font-family: var(--font-family-secondary);
+}
+
+.herb-card img {
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ----thankyou.html and about.html page styling---- */
+.about, .thankyou {
+    font-family: var(--font-family-secondary);
+    background-color: var(--color-light);
+    max-width: 400px;
+    height: auto;
+    padding: 40px;
+    margin: 2rem;
+    text-align: center;
+    align-self: center;
+    border: 6px solid var(--color-tan);
+    border-radius: 6px;
+}
+
+.about p {
+    padding: 1rem;
+}
+.about h2, .thankyou h2{
+    font-family: var(--font-family-primary);
+    font-size: 1.75rem;
+    padding: 1rem;
+}
+
+.about h3 a {
+    font-family: var(--font-family-primary);
+    color: var(--color-black);
+    font-size: 1.5rem; 
+    box-shadow: 5px 5px 5px rgba(201, 217, 199, 0.632);
+}
+
+/* -----Contact form styling----- */
+.contact-form {
+    font-family: var(--font-family-primary);
+    color: var(--color-light);
+    font-size: 1.75rem;
+    background-color: var(--color-darkmuted);
+    padding: 1.25rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color-midmuted);
+    border-radius: 6px;
+}
+
+.form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form fieldset {
+    border: 1px solid var(--color-midmuted);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+form legend {
+    font-weight: bold;
+    color: var(--color-darkmuted);
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: var(--color-darkmuted);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid var(--color-midmuted);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: var(--color-darkmuted);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-darkmuted);
+}
+
+/* -----Footer styling for all pages----- */
+footer {
+    padding: 15px;
+    background-color: var(--color-light);
+    color: var(--color-black);
+    font-family: var(--font-family-secondary);
+    text-align: center;
+    border: 2px solid var(--color-midmuted);
+}
+

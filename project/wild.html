@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herb Informatory</title>
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals Web Project">
+    <meta name="author" content="Shaundra Strong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/herb.css">
+    <link rel="stylesheet" href="styles/herb-large.css">
+    <script src="scripts/herb.js" defer></script>
+</head>
+
+<body id="wild">
+    <header>
+        <div class="header-top">
+            <img src="images/project-logo.jpg" alt="Herb Informatory" width="300" height="300">
+            <div class="header-text">
+                <h1>Herb Informatory</h1>
+                <p>Your local hub for general herbal knowledge and local workshops!</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <!-- Hamburger icon -->
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+
+            <!-- Nav menu -->
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="has-submenu">
+                    <a href="#" id="herbs-toggle">Herbs</a>
+                        <ul class="dropdown" id="submenu">
+                            <li><a href="herbs.html">All Herbs</a></li>
+                            <li><a href="common.html">Common Garden Herbs</a></li>
+                            <li><a href="wild.html">Wild Herbs</a></li>
+                        </ul>
+                </li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="hero" class="all-wild">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🐾 Shaundra Strong 🐾 North Carolina, USA</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

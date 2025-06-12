@@ -1,0 +1,106 @@
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+
+    /* Structure for top row */
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+
+
+    /* Title and subtitle stacked */
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-text h1 {
+        font-size: 3rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .navbar {
+        grid-area: menu;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0 1rem;
+        width: auto;
+    }
+
+    .menu li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .dropdown {
+        position: absolute;
+        background: var(--color-light);
+        display: none;
+    }
+
+    #submenu li:hover{
+        background-color: var(--color-midmuted);
+    }
+
+
+    /* -----home main body----- */
+    #hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 1rem;
+        align-items: stretch; /* equal height */
+    }
+
+    #pick {
+        padding: 1rem;
+        border: 1px solid var(--color-midmuted);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    #event {
+        padding: 1rem;
+        border: 1px solid var(--color-midmuted);
+        border-radius: 8px;
+        margin-bottom: 1rem; /* space between event and message */
+    }
+
+    #message, .contact-form {
+        grid-column: span 2;
+    }
+
+    .about, .thankyou, .form {
+        grid-column: 1 / -1;   /* spans both columns and then centers and controls how far it will stretch */
+        justify-self: center;       
+        max-width: 600px;            
+    }
+
+}
+
