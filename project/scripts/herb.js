@@ -19,7 +19,7 @@ menuToggle.addEventListener('click', () => {
 
 herbsToggle.addEventListener('click', (e) => {
 e.preventDefault(); // Prevent link jump
-herbsItem.classList.toggle('open');
+    herbsItem.classList.toggle('open');
 });
 
 // coding for the herbs to load into html files
@@ -68,8 +68,44 @@ document.addEventListener("DOMContentLoaded", () => {
         eventCards();
     }
 
+    if (page === "contact") {
+        window.addEventListener("DOMContentLoaded", (event) => {
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                        // document.getElementsById("contactForm").addEventListener("submit", (e) => {
+                        //     e.preventDefault();
+            // Get form data
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+
+                // save user info from form
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
+
+            //go to thankyou.html
+                window.location.href = "thankyou.html";
+            });
+        });
+        
+    }
+
+    if (page === "thankPage") {
+        const name = localStorage.getItem("name");
+        const email = localStorage.getItem("email");
+
+        // If data exists in localStorage, show the message
+        if (name && email) {
+            const message = `Your message just sprouted in our inbox! 🌱 Thanks ${name} for reaching out—we'll get back to you soon at ${email}.`;
+            document.getElementById("userThanks").innerHTML = message;
+        } else {
+            document.getElementById("userThanks").innerHTML = "Oops, something went wrong. Please try again.";
+        }
+
+    }
+
 });
         
+
 function pickRandomHerb() {
     const herb = herbs[Math.floor(Math.random() * herbs.length)];
 
@@ -199,8 +235,5 @@ function eventCards() {
 
     })
 }
-
-
-
 
 
